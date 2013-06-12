@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\bin\Debug\OAuthTwitterTimeLine.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\bin\Debug\OAuthTwitterTimeLine.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\obj\Debug\OAuthTwitterTimeLine.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\obj\Debug\OAuthTwitterTimeLine.pdb
