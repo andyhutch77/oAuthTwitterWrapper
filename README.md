@@ -10,3 +10,6 @@ I will be providing example usage in the following formats:
 * Web application (todo: tested just need to add to project)
 * Mvc application (todo: tested just need to add to project)
 * Umbraco razor solution (todo: tested just need to add to project)
+
+I am going to improve and refactor this to take in key and secret via app.config and make the timeline more configurable 
+(When/if I get time).
