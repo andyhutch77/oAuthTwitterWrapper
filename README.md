@@ -7,6 +7,6 @@ The idea stems from this question on Stackoverflow:
 
 I will be providing example usage in the following formats:
 * Console
-* Web application
-* Mvc application
-* Umbraco razor solution
+* Web application (todo: tested just need to add to project)
+* Mvc application (todo: tested just need to add to project)
+* Umbraco razor solution (todo: tested just need to add to project)
