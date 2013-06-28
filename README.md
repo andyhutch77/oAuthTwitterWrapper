@@ -18,6 +18,7 @@ This uses a page WebMethod to make the api call and an Ajax json request to disp
 It could however be exposed in any kind of web service.
 It makes use of jQuery and this great library [twitter-text] (https://github.com/twitter/twitter-text-js).
 ## Mvc application 
-(todo: tested just need to add to project)
+This uses a controller action that returns the json and uses the same method to display them as above.
+Again this uses jQuery and twitter-text.
 ## Umbraco razor solution 
 (todo: tested just need to add to project)
