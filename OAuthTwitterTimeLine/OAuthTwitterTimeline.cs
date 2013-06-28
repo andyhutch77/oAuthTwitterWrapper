@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,10 +13,15 @@ namespace OAuthTwitterTimeLine
 {
     public class OAuthTwitterTimeline
     {
-        private string oAuthConsumerKey = "KEY";
-        private string oAuthConsumerSecret = "Secret";
-        private string oAuthUrl = "https://api.twitter.com/oauth2/token";
-        private string screenname = "screenname";
+        private string oAuthConsumerKey = ConfigurationManager.AppSettings["oAuthConsumerKey"];
+        private string oAuthConsumerSecret = ConfigurationManager.AppSettings["oAuthConsumerSecret"];
+        private string oAuthUrl = ConfigurationManager.AppSettings["oAuthUrl"];
+        private static string screenname = ConfigurationManager.AppSettings["screenname"];
+        private static string include_rts = ConfigurationManager.AppSettings["include_rts"];
+        private static string exclude_replies = ConfigurationManager.AppSettings["exclude_replies"];
+        private static string count = ConfigurationManager.AppSettings["count"];
+        private static string timelineFormat = ConfigurationManager.AppSettings["timelineFormat"];
+        private string timelineUrl = string.Format(timelineFormat, screenname, include_rts, exclude_replies, count);
 
         public string GetMyTimeline()
         {
@@ -56,9 +62,6 @@ namespace OAuthTwitterTimeLine
             }
 
             // Do the timeline
-            var timelineFormat =
-                "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name={0}&include_rts=1&exclude_replies=1&count=5";
-            var timelineUrl = string.Format(timelineFormat, screenname);
             HttpWebRequest timeLineRequest = (HttpWebRequest)WebRequest.Create(timelineUrl);
             var timelineHeaderFormat = "{0} {1}";
             timeLineRequest.Headers.Add("Authorization",
