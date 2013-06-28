@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "Conso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsApplication", "WebFormsApplication\WebFormsApplication.csproj", "{C7DA3355-60C7-421B-8A6B-414759C6E2AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication", "MvcApplication\MvcApplication.csproj", "{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{C7DA3355-60C7-421B-8A6B-414759C6E2AC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C7DA3355-60C7-421B-8A6B-414759C6E2AC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C7DA3355-60C7-421B-8A6B-414759C6E2AC}.Release|x86.ActiveCfg = Release|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
