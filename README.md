@@ -11,10 +11,12 @@ If you like this and use it please upvote my question and answer.
 You need to get your consumer key and secret from [https://dev.twitter.com/apps/new] (https://dev.twitter.com/apps/new).
 You can add them to the config files in each project (app.config and web.config). You will also have to set the screenname too.
 
-I will be providing example usage in the following formats:
 ## Console
+This is the simplest form of use, it just makes the call and prints to the console window.
 ## Web application 
-This uses a page WebMethod to make the api call and an Ajax json request to display the tweets. It makes use of jQuery and this great library [twitter-text] (https://github.com/twitter/twitter-text-js)
+This uses a page WebMethod to make the api call and an Ajax json request to display the tweets.
+It could however be exposed in any kind of web service.
+It makes use of jQuery and this great library [twitter-text] (https://github.com/twitter/twitter-text-js).
 ## Mvc application 
 (todo: tested just need to add to project)
 ## Umbraco razor solution 
