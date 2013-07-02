@@ -71,7 +71,7 @@ namespace OAuthTwitterTimeLine
             WebResponse timeLineResponse = timeLineRequest.GetResponse();
 
             var timeLineJson = string.Empty;
-            using (authResponse)
+            using (timeLineResponse)
             {
                 using (var reader = new StreamReader(timeLineResponse.GetResponseStream()))
                 {
