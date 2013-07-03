@@ -1,4 +1,4 @@
-#oAuthTwitterTimeline
+#oAuthTwitterWrapper
 ================================
 This provides a really simple solution to authenticate and retreive a timeline (twitter feed) as raw json.
 
