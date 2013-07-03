@@ -19,6 +19,6 @@ It could however be exposed in any kind of web service.
 It makes use of jQuery and this great library [twitter-text] (https://github.com/twitter/twitter-text-js).
 ## Mvc application 
 This uses a controller action that returns the json and uses the same method to display them as above.
-Again this uses jQuery and twitter-text.
+Again this uses jQuery and twitter-text. * Please note that I created this in VS2010 and you need MVC4 installed, I will update this to VS2012 soon.
 ## Umbraco razor solution 
 (todo: tested just need to add to project)
