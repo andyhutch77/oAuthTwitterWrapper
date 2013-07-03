@@ -6,3 +6,11 @@ C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthent
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\obj\Debug\OAuthTwitterTimeLine.pdb
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\obj\Debug\OAuthTwitterTimeLine.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\oAuthTwitterAuthenticateTimeline\OAuthTwitterTimeLine\bin\Debug\OAuthTwitterTimeLine.dll.config
+C:\Sites\twit\oAuthTwitterTimeline\OAuthTwitterTimeLine\bin\Debug\OAuthTwitterTimeLine.dll.config
+C:\Sites\twit\oAuthTwitterTimeline\OAuthTwitterTimeLine\bin\Debug\OAuthTwitterTimeLine.dll
+C:\Sites\twit\oAuthTwitterTimeline\OAuthTwitterTimeLine\bin\Debug\OAuthTwitterTimeLine.pdb
+C:\Sites\twit\oAuthTwitterTimeline\OAuthTwitterTimeLine\bin\Debug\Newtonsoft.Json.dll
+C:\Sites\twit\oAuthTwitterTimeline\OAuthTwitterTimeLine\bin\Debug\Newtonsoft.Json.xml
+C:\Sites\twit\oAuthTwitterTimeline\OAuthTwitterTimeLine\obj\Debug\OAuthTwitterTimeLine.csprojResolveAssemblyReference.cache
+C:\Sites\twit\oAuthTwitterTimeline\OAuthTwitterTimeLine\obj\Debug\OAuthTwitterTimeLine.dll
+C:\Sites\twit\oAuthTwitterTimeline\OAuthTwitterTimeLine\obj\Debug\OAuthTwitterTimeLine.pdb
