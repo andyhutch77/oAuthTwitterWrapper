@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using OAuthTwitterTimeLine;
+using OAuthTwitterWrapper;
 
 namespace WebFormsApplication
 {
@@ -19,8 +19,8 @@ namespace WebFormsApplication
         [WebMethod]
         public static string GetTwitterFeed()
         {
-            var oAuthTwitterTimeline = new OAuthTwitterTimeline();
-            return oAuthTwitterTimeline.GetMyTimeline();
+            var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+			return oAuthTwitterWrapper.GetMyTimeline();
         }
     }
 }

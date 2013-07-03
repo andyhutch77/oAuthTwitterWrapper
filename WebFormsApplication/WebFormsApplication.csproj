@@ -73,9 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OAuthTwitterTimeLine\OAuthTwitterTimeLine.csproj">
-      <Project>{8C046205-6202-4055-9F19-13F5795E96E6}</Project>
-      <Name>OAuthTwitterTimeLine</Name>
+    <ProjectReference Include="..\oAuthTwitterWrapper\oAuthTwitterWrapper.csproj">
+      <Project>{8BB6CE98-A55B-495A-B8D2-37ECE69E2956}</Project>
+      <Name>oAuthTwitterWrapper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -13,10 +13,8 @@ C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\obj\x86\Debug\ConsoleAppli
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\obj\x86\Debug\ConsoleApplication.pdb
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\ConsoleApplication.exe
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
-C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\OAuthTwitterTimeLine.dll
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\Newtonsoft.Json.dll
-C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\OAuthTwitterTimeLine.pdb
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\Newtonsoft.Json.xml
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\obj\x86\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
-C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\OAuthTwitterSearch.dll
-C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\OAuthTwitterSearch.pdb
+C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.dll
+C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.pdb

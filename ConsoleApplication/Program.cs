@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using OAuthTwitterTimeLine;
-using OAuthTwitterSearch;
+using OAuthTwitterWrapper;
 
 namespace ConsoleApplication
 {
@@ -11,10 +10,11 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var oAuthTwitterTimeline = new OAuthTwitterTimeline();
-            Console.Write(oAuthTwitterTimeline.GetMyTimeline());
-			//var oAuthTwitterSearch = new OAuthTwitterSearch.OAuthTwitterSearch();
-			//Console.Write(oAuthTwitterSearch.GetSearch());
+            var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+			Console.Write("**** Time Line *****\n");
+			Console.Write(oAuthTwitterWrapper.GetMyTimeline() + "\n\n");
+			Console.Write("**** Search *****\n");
+			Console.Write(oAuthTwitterWrapper.GetSearch() + "\n\n");
             Console.ReadLine();
         }
     }
