@@ -18,3 +18,13 @@ C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\Newtonsoft.Json.
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\obj\x86\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.dll
 C:\Sites\twit\oAuthTwitterTimeline\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.pdb
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\obj\x86\Debug\ConsoleApplication.pdb
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.dll
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.pdb
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\obj\x86\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache

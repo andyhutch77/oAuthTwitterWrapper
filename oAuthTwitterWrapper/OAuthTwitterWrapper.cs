@@ -48,7 +48,7 @@ namespace OAuthTwitterWrapper
 
 			// Do the timeline
 			var utility = new Utility();
-			searchJson = utility.RequstJson(timelineUrl, twitAuthResponse.token_type, twitAuthResponse.access_token);
+			searchJson = utility.RequstJson(searchUrl, twitAuthResponse.token_type, twitAuthResponse.access_token);
 
 			return searchJson;
 		}

@@ -1,15 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthTwitterTimeLine", "OAuthTwitterTimeLine\OAuthTwitterTimeLine.csproj", "{8C046205-6202-4055-9F19-13F5795E96E6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{BAD9DC9E-58AF-41CD-8CBE-618DA58A1EA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsApplication", "WebFormsApplication\WebFormsApplication.csproj", "{C7DA3355-60C7-421B-8A6B-414759C6E2AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication", "MvcApplication\MvcApplication.csproj", "{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthTwitterSearch", "OAuthTwitterSearch\OAuthTwitterSearch.csproj", "{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oAuthTwitterWrapper", "oAuthTwitterWrapper\oAuthTwitterWrapper.csproj", "{8BB6CE98-A55B-495A-B8D2-37ECE69E2956}"
 EndProject
@@ -23,16 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{8C046205-6202-4055-9F19-13F5795E96E6}.Release|x86.ActiveCfg = Release|Any CPU
 		{BAD9DC9E-58AF-41CD-8CBE-618DA58A1EA7}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{BAD9DC9E-58AF-41CD-8CBE-618DA58A1EA7}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{BAD9DC9E-58AF-41CD-8CBE-618DA58A1EA7}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -63,16 +49,6 @@ Global
 		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A6336EDC-18D8-4D6A-8B10-7033C7613CA7}.Release|x86.ActiveCfg = Release|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{A38DDD2A-5E2D-4493-B05B-E8AF6DA30895}.Release|x86.ActiveCfg = Release|Any CPU
 		{8BB6CE98-A55B-495A-B8D2-37ECE69E2956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8BB6CE98-A55B-495A-B8D2-37ECE69E2956}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB6CE98-A55B-495A-B8D2-37ECE69E2956}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

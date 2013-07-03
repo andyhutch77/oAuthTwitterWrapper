@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
-using OAuthTwitterTimeLine;
+using OAuthTwitterWrapper;
 
 namespace MvcApplication.Controllers
 {
@@ -17,8 +17,8 @@ namespace MvcApplication.Controllers
 
         public JsonResult GetTwitterFeed()
         {
-            var oAuthTwitterTimeline = new OAuthTwitterTimeline();
-            return Json(oAuthTwitterTimeline.GetMyTimeline(), JsonRequestBehavior.AllowGet);
+            var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+            return Json(oAuthTwitterWrapper.GetMyTimeline(), JsonRequestBehavior.AllowGet);
         }
     }
 }
