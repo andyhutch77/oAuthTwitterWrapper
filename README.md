@@ -1,6 +1,13 @@
 #oAuthTwitterWrapper
 ================================
-This provides a really simple solution to authenticate and retreive a timeline (twitter feed) as raw json.
+This provides a really simple solution to authenticating and wrapping twitter's API calls using the 1.1 API.
+
+Currently it exposes timeline (twitter feed) and search calls, returned as raw json.
+
+Screem shot below, please note there is no styling applied you have full control over how it is rendered in your application.
+
+
+![Demo MVC Web App output](./ScreenShot.PNG "Demo MVC Web App output")
 
 The idea stems from this question on Stackoverflow:
 [http://stackoverflow.com/questions/17067996/authenticate-and-request-a-users-timeline-with-twitter-api-1-1-oauth](http://stackoverflow.com/questions/17067996/authenticate-and-request-a-users-timeline-with-twitter-api-1-1-oauth)
