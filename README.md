@@ -4,7 +4,7 @@ This provides a really simple solution to authenticating and wrapping twitter's 
 
 Currently it exposes timeline (twitter feed) and search calls, returned as raw json.
 
-Screem shot below, please note there is no styling applied you have full control over how it is rendered in your application.
+Screen shot below (please note there is no styling applied you have full control over how it is rendered in your application).
 
 
 ![Demo MVC Web App output](./ScreenShot.PNG "Demo MVC Web App output")
