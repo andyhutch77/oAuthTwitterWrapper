@@ -7,14 +7,15 @@ using OAuthTwitterWrapper;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using System.IO;
+using OAuthTwitterWrapper.JsonTypes;
 
 namespace oAuthTwitterWrapper
 {
 	public class Authenticate
 	{
-		public TwitAuthenticateResponse AuthenticateMe(string oAuthConsumerKey, string oAuthConsumerSecret, string oAuthUrl)
+		public AuthResponse AuthenticateMe(string oAuthConsumerKey, string oAuthConsumerSecret, string oAuthUrl)
 		{
-			TwitAuthenticateResponse twitAuthResponse = null;
+			AuthResponse twitAuthResponse = null;
 			// Do the Authenticate
 			var authHeaderFormat = "Basic {0}";
 
@@ -46,7 +47,7 @@ namespace oAuthTwitterWrapper
 				{
 					JavaScriptSerializer js = new JavaScriptSerializer();
 					var objectText = reader.ReadToEnd();
-					twitAuthResponse = JsonConvert.DeserializeObject<TwitAuthenticateResponse>(objectText);
+					twitAuthResponse = JsonConvert.DeserializeObject<AuthResponse>(objectText);
 				}
 			}
 

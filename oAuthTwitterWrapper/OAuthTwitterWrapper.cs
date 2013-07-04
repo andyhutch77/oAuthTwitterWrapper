@@ -9,6 +9,7 @@ using System.Text;
 using System.Web;
 using System.Web.Script.Serialization;
 using oAuthTwitterWrapper;
+using OAuthTwitterWrapper.JsonTypes;
 
 namespace OAuthTwitterWrapper
 {
@@ -31,11 +32,11 @@ namespace OAuthTwitterWrapper
         {
 			var timeLineJson = string.Empty;
 			var authenticate = new Authenticate();
-			TwitAuthenticateResponse twitAuthResponse = authenticate.AuthenticateMe(oAuthConsumerKey, oAuthConsumerSecret, oAuthUrl);
+			AuthResponse twitAuthResponse = authenticate.AuthenticateMe(oAuthConsumerKey, oAuthConsumerSecret, oAuthUrl);
 
             // Do the timeline
 			var utility = new Utility();
-			timeLineJson = utility.RequstJson(timelineUrl, twitAuthResponse.token_type, twitAuthResponse.access_token);
+			timeLineJson = utility.RequstJson(timelineUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
             
             return timeLineJson;
         }
@@ -44,11 +45,11 @@ namespace OAuthTwitterWrapper
 		{
 			var searchJson = string.Empty;
 			var authenticate = new Authenticate();
-			TwitAuthenticateResponse twitAuthResponse = authenticate.AuthenticateMe(oAuthConsumerKey, oAuthConsumerSecret, oAuthUrl);
+			AuthResponse twitAuthResponse = authenticate.AuthenticateMe(oAuthConsumerKey, oAuthConsumerSecret, oAuthUrl);
 
 			// Do the timeline
 			var utility = new Utility();
-			searchJson = utility.RequstJson(searchUrl, twitAuthResponse.token_type, twitAuthResponse.access_token);
+			searchJson = utility.RequstJson(searchUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
 
 			return searchJson;
 		}

@@ -46,9 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authenticate.cs" />
+    <Compile Include="JsonTypes\AuthResponse.cs" />
+    <Compile Include="JsonTypes\Description.cs" />
+    <Compile Include="JsonTypes\Entities.cs" />
+    <Compile Include="JsonTypes\Entities2.cs" />
+    <Compile Include="JsonTypes\TimeLine.cs" />
+    <Compile Include="JsonTypes\User.cs" />
     <Compile Include="OAuthTwitterWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TwitAuthenticateResponse.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
