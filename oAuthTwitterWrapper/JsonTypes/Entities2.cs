@@ -10,16 +10,16 @@ namespace OAuthTwitterWrapper.JsonTypes
     {
 
         [JsonProperty("hashtags")]
-        public object[] Hashtags { get; set; }
+		public List<string> Hashtags { get; set; }
 
         [JsonProperty("symbols")]
-        public object[] Symbols { get; set; }
+		public List<string> Symbols { get; set; }
 
         [JsonProperty("urls")]
-        public object[] Urls { get; set; }
+		public List<string> Urls { get; set; }
 
         [JsonProperty("user_mentions")]
-        public object[] UserMentions { get; set; }
+		public List<string> UserMentions { get; set; }
     }
 
 }

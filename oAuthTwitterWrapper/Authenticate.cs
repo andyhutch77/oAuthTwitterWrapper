@@ -46,7 +46,7 @@ namespace oAuthTwitterWrapper
 				using (var reader = new StreamReader(authResponse.GetResponseStream()))
 				{
 					JavaScriptSerializer js = new JavaScriptSerializer();
-					var objectText = reader.ReadToEnd();
+					var objectText = reader.ReadToEnd();					
 					twitAuthResponse = JsonConvert.DeserializeObject<AuthResponse>(objectText);
 				}
 			}
