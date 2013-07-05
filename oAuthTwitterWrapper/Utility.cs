@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.IO;
+using Newtonsoft.Json;
+using OAuthTwitterWrapper.JsonTypes;
 
 namespace oAuthTwitterWrapper
 {
@@ -25,6 +27,8 @@ namespace oAuthTwitterWrapper
 				using (var reader = new StreamReader(timeLineResponse.GetResponseStream()))
 				{
 					json = reader.ReadToEnd();
+					// The below can be used to deserialize into a c# object
+					//var result = JsonConvert.DeserializeObject<List<TimeLine>>(json);
 				}
 			}
 			return json;
