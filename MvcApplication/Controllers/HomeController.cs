@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 using OAuthTwitterWrapper;
+using OAuthTwitterWrapper.JsonTypes;
 
 namespace MvcApplication.Controllers
 {
@@ -19,6 +21,15 @@ namespace MvcApplication.Controllers
         {
             var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
             return Json(oAuthTwitterWrapper.GetMyTimeline(), JsonRequestBehavior.AllowGet);
+        }
+
+
+        public ActionResult Deserialized()
+        {
+            var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+            var json = oAuthTwitterWrapper.GetMyTimeline();
+            var result = JsonConvert.DeserializeObject<List<TimeLine>>(json);
+            return View(result);
         }
     }
 }

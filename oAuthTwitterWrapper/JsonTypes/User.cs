@@ -35,7 +35,7 @@ namespace OAuthTwitterWrapper.JsonTypes
 		public string Url { get; set; }
 
 		[JsonProperty("entities")]
-		public Entities Entities { get; set; }
+		public UserEntities Entities { get; set; }
 
 		[JsonProperty("protected")]
 		public bool Protected { get; set; }

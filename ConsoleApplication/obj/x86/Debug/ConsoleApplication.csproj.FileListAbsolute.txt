@@ -28,3 +28,13 @@ C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\N
 C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.pdb
 C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Administrator\github\oAuthTwitterWrapper\ConsoleApplication\obj\x86\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\obj\x86\Debug\ConsoleApplication.pdb
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.dll
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\oAuthTwitterWrapper.pdb
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Barry\Documents\GitHub\oAuthTwitterWrapper\ConsoleApplication\obj\x86\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache

@@ -9,7 +9,7 @@ namespace OAuthTwitterWrapper.JsonTypes
     public class Description
     {		
         [JsonProperty("urls")]
-		public List<string> Urls { get; set; }
+		public List<Url> Urls { get; set; }
     }
 
 }
