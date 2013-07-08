@@ -31,5 +31,13 @@ namespace MvcApplication.Controllers
             var result = JsonConvert.DeserializeObject<List<TimeLine>>(json);
             return View(result);
         }
+
+        public ActionResult DeserializedSearch()
+        {
+            var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+            var json = oAuthTwitterWrapper.GetSearch();
+            var result = JsonConvert.DeserializeObject<Search>(json);
+            return View(result);
+        }
     }
 }
