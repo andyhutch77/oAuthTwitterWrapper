@@ -13,7 +13,7 @@ namespace OAuthTwitterWrapper.JsonTypes
         public string CreatedAt { get; set; }
 
 		[JsonProperty("id")]
-		public int Id { get; set; }
+		public string Id { get; set; }
 
 		[JsonProperty("id_str")]
 		public string IdStr { get; set; }
@@ -64,7 +64,7 @@ namespace OAuthTwitterWrapper.JsonTypes
 		public int FavoriteCount { get; set; }
 
 		[JsonProperty("entities")]
-		public Entities2 Entities { get; set; }
+		public Entities Entities { get; set; }
 
 		[JsonProperty("favorited")]
 		public bool Favorited { get; set; }
