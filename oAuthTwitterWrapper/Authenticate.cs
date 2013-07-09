@@ -11,7 +11,7 @@ using OAuthTwitterWrapper.JsonTypes;
 
 namespace oAuthTwitterWrapper
 {
-	public class Authenticate
+	class Authenticate
 	{
 		public AuthResponse AuthenticateMe(string oAuthConsumerKey, string oAuthConsumerSecret, string oAuthUrl)
 		{

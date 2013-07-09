@@ -13,7 +13,7 @@ using OAuthTwitterWrapper.JsonTypes;
 
 namespace OAuthTwitterWrapper
 {
-    public class OAuthTwitterWrapper
+	public class OAuthTwitterWrapper : IOAuthTwitterWrapper
     {
         private string oAuthConsumerKey = ConfigurationManager.AppSettings["oAuthConsumerKey"];
         private string oAuthConsumerSecret = ConfigurationManager.AppSettings["oAuthConsumerSecret"];

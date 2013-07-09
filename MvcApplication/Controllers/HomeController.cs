@@ -12,6 +12,13 @@ namespace MvcApplication.Controllers
 {
     public class HomeController : Controller
     {
+		private readonly IOAuthTwitterWrapper _oAuthTwitterWrapper;
+
+		public HomeController(IOAuthTwitterWrapper oAuthTwitterWrapper)
+		{
+			_oAuthTwitterWrapper = oAuthTwitterWrapper;
+		}
+
         public ActionResult Index()
         {
             return View();
@@ -19,23 +26,20 @@ namespace MvcApplication.Controllers
 
         public JsonResult GetTwitterFeed()
         {
-            var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-            return Json(oAuthTwitterWrapper.GetMyTimeline(), JsonRequestBehavior.AllowGet);
+			return Json(_oAuthTwitterWrapper.GetMyTimeline(), JsonRequestBehavior.AllowGet);
         }
 
 
         public ActionResult Deserialized()
         {
-            var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-            var json = oAuthTwitterWrapper.GetMyTimeline();
+			var json = _oAuthTwitterWrapper.GetMyTimeline();
             var result = JsonConvert.DeserializeObject<List<TimeLine>>(json);
             return View(result);
         }
 
         public ActionResult DeserializedSearch()
         {
-            var oAuthTwitterWrapper = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-            var json = oAuthTwitterWrapper.GetSearch();
+			var json = _oAuthTwitterWrapper.GetSearch();
             var result = JsonConvert.DeserializeObject<Search>(json);
             return View(result);
         }

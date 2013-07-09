@@ -9,7 +9,7 @@ using OAuthTwitterWrapper.JsonTypes;
 
 namespace oAuthTwitterWrapper
 {
-	public class Utility
+	class Utility
 	{
 		public string RequstJson(string apiUrl, string tokenType, string accessToken)
 		{
