@@ -3,7 +3,7 @@ This provides a really simple solution to authenticating and wrapping twitter's 
 
 ##Quick installation instructions:
 
-Run the following nuget command from your project:
+Run the following nuget command from your project to install the [package] (http://nuget.org/packages/oAuthTwitterWrapper/):
 
 `Install-Package oAuthTwitterWrapper`
 
