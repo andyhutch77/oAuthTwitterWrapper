@@ -7,7 +7,7 @@ using System.IO;
 using Newtonsoft.Json;
 using OAuthTwitterWrapper.JsonTypes;
 
-namespace oAuthTwitterWrapper
+namespace OAuthTwitterWrapper
 {
 	class Utility
 	{

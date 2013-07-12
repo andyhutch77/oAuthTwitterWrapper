@@ -8,35 +8,90 @@ using System.Net;
 using System.Text;
 using System.Web;
 using System.Web.Script.Serialization;
-using oAuthTwitterWrapper;
 using OAuthTwitterWrapper.JsonTypes;
 
 namespace OAuthTwitterWrapper
 {
 	public class OAuthTwitterWrapper : IOAuthTwitterWrapper
     {
-        private string oAuthConsumerKey = ConfigurationManager.AppSettings["oAuthConsumerKey"];
-        private string oAuthConsumerSecret = ConfigurationManager.AppSettings["oAuthConsumerSecret"];
-        private string oAuthUrl = ConfigurationManager.AppSettings["oAuthUrl"];
-        private static string screenname = ConfigurationManager.AppSettings["screenname"];
-        private static string include_rts = ConfigurationManager.AppSettings["include_rts"];
-        private static string exclude_replies = ConfigurationManager.AppSettings["exclude_replies"];
-        private static string count = ConfigurationManager.AppSettings["count"];
-        private static string timelineFormat = ConfigurationManager.AppSettings["timelineFormat"];
-        private string timelineUrl = string.Format(timelineFormat, screenname, include_rts, exclude_replies, count);
-		private static string searchFormat = ConfigurationManager.AppSettings["searchFormat"];
-		private static string searchQuery = ConfigurationManager.AppSettings["searchQuery"];
-		private string searchUrl = string.Format(searchFormat, searchQuery);
+		public IAuthenticateSettings AuthenticateSettings { get; set; }
+		public ITimeLineSettings TimeLineSettings { get; set; }
+		public ISearchSettings SearchSettings { get; set; }
+
+		/// <summary>
+		/// The default constructor takes all the settings from the appsettings file
+		/// </summary>
+		public OAuthTwitterWrapper()
+		{
+			string oAuthConsumerKey = ConfigurationManager.AppSettings["oAuthConsumerKey"];
+            string oAuthConsumerSecret = ConfigurationManager.AppSettings["oAuthConsumerSecret"];
+            string oAuthUrl = ConfigurationManager.AppSettings["oAuthUrl"];
+			AuthenticateSettings = new AuthenticateSettings { OAuthConsumerKey = oAuthConsumerKey, OAuthConsumerSecret = oAuthConsumerSecret, OAuthUrl = oAuthUrl };
+			string screenname = ConfigurationManager.AppSettings["screenname"];
+			string include_rts = ConfigurationManager.AppSettings["include_rts"];
+			string exclude_replies = ConfigurationManager.AppSettings["exclude_replies"];
+			string count = ConfigurationManager.AppSettings["count"];
+			string timelineFormat = ConfigurationManager.AppSettings["timelineFormat"];			
+			TimeLineSettings = new TimeLineSettings
+			{
+				ScreenName = screenname,
+				IncludeRts = include_rts,
+				ExcludeReplies = exclude_replies,
+				Count = count,
+				TimelineFormat = timelineFormat
+			};
+			string searchFormat = ConfigurationManager.AppSettings["searchFormat"];
+			string searchQuery = ConfigurationManager.AppSettings["searchQuery"];
+			SearchSettings = new SearchSettings
+			{
+				SearchFormat = searchFormat,
+				SearchQuery = searchQuery
+			};
+				
+		}
+
+		/// <summary>
+		/// This allows the authentications settings to be passed in
+		/// </summary>
+		/// <param name="authenticateSettings"></param>
+		public OAuthTwitterWrapper(IAuthenticateSettings authenticateSettings)
+		{
+			AuthenticateSettings = authenticateSettings;
+		}
+
+		/// <summary>
+		/// This allows the authentications and timeline settings to be passed in
+		/// </summary>
+		/// <param name="authenticateSettings"></param>
+		/// <param name="timeLineSettings"></param>
+		public OAuthTwitterWrapper(IAuthenticateSettings authenticateSettings, ITimeLineSettings timeLineSettings)
+		{
+			AuthenticateSettings = authenticateSettings;
+			TimeLineSettings = timeLineSettings;
+		}
+
+		/// <summary>
+		/// This allows the authentications, timeline and search settings to be passed in
+		/// </summary>
+		/// <param name="authenticateSettings"></param>
+		/// <param name="timeLineSettings"></param>
+		/// <param name="searchSettings"></param>
+		public OAuthTwitterWrapper(IAuthenticateSettings authenticateSettings, ITimeLineSettings timeLineSettings, ISearchSettings searchSettings)
+		{
+			AuthenticateSettings = authenticateSettings;
+			TimeLineSettings = timeLineSettings;
+			SearchSettings = searchSettings;
+		}
 
         public string GetMyTimeline()
         {
 			var timeLineJson = string.Empty;
-			var authenticate = new Authenticate();
-			AuthResponse twitAuthResponse = authenticate.AuthenticateMe(oAuthConsumerKey, oAuthConsumerSecret, oAuthUrl);
+			IAuthenticate authenticate = new Authenticate();
+			AuthResponse twitAuthResponse = authenticate.AuthenticateMe(AuthenticateSettings);
 
             // Do the timeline
 			var utility = new Utility();
-			timeLineJson = utility.RequstJson(timelineUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
+			timeLineJson = utility.RequstJson(TimeLineSettings.TimelineUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
             
             return timeLineJson;
         }
@@ -44,12 +99,12 @@ namespace OAuthTwitterWrapper
 		public string GetSearch()
 		{
 			var searchJson = string.Empty;
-			var authenticate = new Authenticate();
-			AuthResponse twitAuthResponse = authenticate.AuthenticateMe(oAuthConsumerKey, oAuthConsumerSecret, oAuthUrl);
+			IAuthenticate authenticate = new Authenticate();
+			AuthResponse twitAuthResponse = authenticate.AuthenticateMe(AuthenticateSettings);
 
 			// Do the timeline
 			var utility = new Utility();
-			searchJson = utility.RequstJson(searchUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
+			searchJson = utility.RequstJson(SearchSettings.SearchUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
 
 			return searchJson;
 		}

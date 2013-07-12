@@ -9,11 +9,11 @@ using Newtonsoft.Json;
 using System.IO;
 using OAuthTwitterWrapper.JsonTypes;
 
-namespace oAuthTwitterWrapper
+namespace OAuthTwitterWrapper
 {
-	class Authenticate
+	class Authenticate : IAuthenticate
 	{
-		public AuthResponse AuthenticateMe(string oAuthConsumerKey, string oAuthConsumerSecret, string oAuthUrl)
+		public AuthResponse AuthenticateMe(IAuthenticateSettings authenticateSettings)
 		{
 			AuthResponse twitAuthResponse = null;
 			// Do the Authenticate
@@ -21,13 +21,13 @@ namespace oAuthTwitterWrapper
 
 			var authHeader = string.Format(authHeaderFormat,
 										   Convert.ToBase64String(
-											   Encoding.UTF8.GetBytes(Uri.EscapeDataString(oAuthConsumerKey) + ":" +
+											   Encoding.UTF8.GetBytes(Uri.EscapeDataString(authenticateSettings.OAuthConsumerKey) + ":" +
 
-																	  Uri.EscapeDataString((oAuthConsumerSecret)))
+																	  Uri.EscapeDataString((authenticateSettings.OAuthConsumerSecret)))
 
 											   ));
 			var postBody = "grant_type=client_credentials";
-			HttpWebRequest authRequest = (HttpWebRequest)WebRequest.Create(oAuthUrl);
+			HttpWebRequest authRequest = (HttpWebRequest)WebRequest.Create(authenticateSettings.OAuthUrl);
 
 			authRequest.Headers.Add("Authorization", authHeader);
 			authRequest.Method = "POST";

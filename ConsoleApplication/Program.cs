@@ -15,6 +15,7 @@ namespace ConsoleApplication
 			Console.Write(oAuthTwitterWrapper.GetMyTimeline() + "\n\n");
 			Console.Write("**** Search *****\n");
 			Console.Write(oAuthTwitterWrapper.GetSearch() + "\n\n");
+			//oAuthTwitterWrapper.TimeLineSettings = new TimeLineSettings {
             Console.ReadLine();
         }
     }

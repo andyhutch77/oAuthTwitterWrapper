@@ -46,7 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authenticate.cs" />
+    <Compile Include="AuthenticateSettings.cs" />
+    <Compile Include="IAuthenticate.cs" />
+    <Compile Include="IAuthenticateSettings.cs" />
     <Compile Include="IOAuthTwitterWrapper.cs" />
+    <Compile Include="ISearchSettings.cs" />
+    <Compile Include="ITimeLineSettings.cs" />
     <Compile Include="JsonTypes\AuthResponse.cs" />
     <Compile Include="JsonTypes\Description.cs" />
     <Compile Include="JsonTypes\Entities.cs" />
@@ -60,6 +65,8 @@
     <Compile Include="JsonTypes\UserMention.cs" />
     <Compile Include="OAuthTwitterWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchSettings.cs" />
+    <Compile Include="TimeLineSettings.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
