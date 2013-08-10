@@ -19,8 +19,8 @@ Add the following code to return the raw json:
 If you would prefer to use serialiazed C# pocos use the following:
 
            var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-	       var json = _oAuthTwitterWrapper.GetMyTimeline();
-           var result = JsonConvert.DeserializeObject<List<TimeLine>>(json);
+           var json = twit.GetMyTimeline();
+           var tweets = JsonConvert.DeserializeObject<List<TimeLine>>(json); // Deserialize with Json.NET
 
 #Notes
 Currently it exposes timeline (twitter feed) and search calls, returned as raw json (which can be serialzied into c# pocos, examples in the github project).
