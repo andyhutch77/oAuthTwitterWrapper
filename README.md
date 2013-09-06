@@ -49,4 +49,37 @@ Again this uses jQuery and twitter-text. * Please note that I created this in VS
 There are also de-serialized versions of the c# pocos, please [view the controller actions] (https://github.com/andyhutch77/oAuthTwitterWrapper/blob/master/MvcApplication/Controllers/HomeController.cs) to see how this is done.
 
 ### Umbraco razor solution 
-(todo: tested just need to add to project)
+Here is a temporary solution, I plan to complete some further work on this in the future.
+
+Run the following nuget command from your umbraco project to install the [package] (http://nuget.org/packages/oAuthTwitterWrapper/):
+
+`Install-Package oAuthTwitterWrapper`
+
+Create a macro script with the following code that outputs the json inline to the page:
+
+          @using System
+          @{
+           var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+           var json = twit.GetMyTimeline();
+           }
+
+           <div id="results"></div>
+           <script type="text/javascript">
+           var json = @Html.Raw(timeLineJson);
+           </script>
+           
+Add a reference to jQuery and twitter-text, then add some javascript to parse the json (The code here is just used for example purposes and not best practice):
+
+                for (var i = 0; i < json.length; i++) {
+                    $("#results").append('<p><strong> - ' + json[i].created_at.substring(0, 16) + '</strong><br/>' + twttr.txt.autoLink(json[i].text) + '</p>');
+                    try {
+                        for (var j = 0; j < json[i].entities.media.length; j++) {
+                            $("#results").append('<a href="' + json[i].entities.media[j].media_url + '" ><img src="' + json[i].entities.media[j].media_url + ':thumb" /></a>');
+                        }
+
+                    } catch(e) {
+                    }
+                }
+               
+Add the macro to the template or content within Umbraco.
+           
