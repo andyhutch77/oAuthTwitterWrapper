@@ -30,7 +30,7 @@ namespace OAuthTwitterWrapper
 			string screenname = ConfigurationManager.AppSettings["screenname"];
 			string include_rts = ConfigurationManager.AppSettings["include_rts"];
 			string exclude_replies = ConfigurationManager.AppSettings["exclude_replies"];
-			string count = ConfigurationManager.AppSettings["count"];
+			int count = Convert.ToInt16(ConfigurationManager.AppSettings["count"]);
 			string timelineFormat = ConfigurationManager.AppSettings["timelineFormat"];			
 			TimeLineSettings = new TimeLineSettings
 			{

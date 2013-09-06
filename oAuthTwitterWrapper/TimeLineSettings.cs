@@ -10,7 +10,7 @@ namespace OAuthTwitterWrapper
 		public string ScreenName { get; set; }
 		public string IncludeRts { get; set; }
 		public string ExcludeReplies { get; set; }
-		public string Count { get; set; }
+		public int Count { get; set; }
 		public string TimelineFormat { get; set; }
 		public string TimelineUrl
 		{
