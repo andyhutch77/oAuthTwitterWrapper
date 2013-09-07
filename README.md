@@ -65,7 +65,7 @@ Create a macro script with the following code that outputs the json inline to th
 
            <div id="results"></div>
            <script type="text/javascript">
-           var json = @Html.Raw(timeLineJson);
+           var json = @Html.Raw(json);
            </script>
            
 Add a reference to jQuery and twitter-text, then add some javascript to parse the json (The code here is just used for example purposes and not best practice):
