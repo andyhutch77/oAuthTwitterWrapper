@@ -55,6 +55,8 @@ Run the following nuget command from your umbraco project to install the [packag
 
 `Install-Package oAuthTwitterWrapper`
 
+Amend the appsettings to add your consumer key, secret and screen name. [Generate your key and secret here] (https://dev.twitter.com/apps/new)
+
 Create a macro script with the following code that outputs the json inline to the page:
 
           @using System
