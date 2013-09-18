@@ -12,11 +12,12 @@ namespace OAuthTwitterWrapper
 		public string ExcludeReplies { get; set; }
 		public int Count { get; set; }
 		public string TimelineFormat { get; set; }
+        public string Since_ID { get; set; }
 		public string TimelineUrl
 		{
 			get
 			{
-				return string.Format(TimelineFormat, ScreenName, IncludeRts, ExcludeReplies, Count);
+				return string.Format(TimelineFormat, ScreenName, IncludeRts, ExcludeReplies, Count,Since_ID);
 			}
 		}
 	}
