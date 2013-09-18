@@ -17,7 +17,15 @@ namespace OAuthTwitterWrapper
 		{
 			get
 			{
-				return string.Format(TimelineFormat, ScreenName, IncludeRts, ExcludeReplies, Count,Since_ID);
+                if (Since_ID != "0")
+                {
+                    return string.Format(TimelineFormat, ScreenName, IncludeRts, ExcludeReplies, Count);
+                }
+                else
+                {
+                    return string.Format(TimelineFormat + "&amp;since_id={4}", ScreenName, IncludeRts, ExcludeReplies, Count, Since_ID);
+                }
+				
 			}
 		}
 	}
