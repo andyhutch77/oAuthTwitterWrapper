@@ -14,7 +14,7 @@ namespace OAuthTwitterWrapper.JsonTypes
     {
 
 		[JsonProperty("id")]
-		public int Id { get; set; }
+		public Int64 Id { get; set; }
 
 		[JsonProperty("id_str")]
 		public string IdStr { get; set; }
