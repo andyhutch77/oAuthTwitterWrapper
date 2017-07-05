@@ -1,5 +1,5 @@
-﻿using System;
-using OAuthTwitterWrapper.JsonTypes;
+﻿using OAuthTwitterWrapper.JsonTypes;
+
 namespace OAuthTwitterWrapper
 {
 	public interface IAuthenticate

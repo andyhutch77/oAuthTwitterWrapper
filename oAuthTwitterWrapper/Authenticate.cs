@@ -7,7 +7,7 @@ using OAuthTwitterWrapper.JsonTypes;
 
 namespace OAuthTwitterWrapper
 {
-	class Authenticate : IAuthenticate
+	internal class Authenticate : IAuthenticate
 	{
 		public AuthResponse AuthenticateMe(IAuthenticateSettings authenticateSettings)
 		{

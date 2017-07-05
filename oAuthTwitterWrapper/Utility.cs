@@ -16,8 +16,8 @@ namespace OAuthTwitterWrapper
             WebResponse responseObject = await Task<WebResponse>.Factory.FromAsync(apiRequest.BeginGetResponse, apiRequest.EndGetResponse, apiRequest);
             using (var responseStream = responseObject.GetResponseStream())
             {
-                var sr = new StreamReader(responseStream, Encoding.UTF8);
-                return await sr.ReadToEndAsync();
+                var reader = new StreamReader(responseStream, Encoding.UTF8);
+                return await reader.ReadToEndAsync();
             }
         }
 
