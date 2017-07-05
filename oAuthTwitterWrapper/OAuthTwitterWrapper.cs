@@ -11,43 +11,47 @@ namespace OAuthTwitterWrapper
 		public ITimeLineSettings TimeLineSettings { get; set; }
 		public ISearchSettings SearchSettings { get; set; }
 
-		/// <summary>
-		/// The default constructor takes all the settings from the appsettings file
-		/// </summary>
-		public OAuthTwitterWrapper()
+        /// <summary>
+        /// This constructor takes most of the settings from the appsettings file apart from consumer key and consumer secret. If not filled in, there are defaults.
+        /// </summary>
+        public OAuthTwitterWrapper(string oAuthConsumerKey, string oAuthConsumerSecret, string screenName)
 		{
-			string oAuthConsumerKey = ConfigurationManager.AppSettings["oAuthConsumerKey"];
-            string oAuthConsumerSecret = ConfigurationManager.AppSettings["oAuthConsumerSecret"];
-            string oAuthUrl = ConfigurationManager.AppSettings["oAuthUrl"];
-			AuthenticateSettings = new AuthenticateSettings { OAuthConsumerKey = oAuthConsumerKey, OAuthConsumerSecret = oAuthConsumerSecret, OAuthUrl = oAuthUrl };
-			string screenname = ConfigurationManager.AppSettings["screenname"];
-			string includeRts = ConfigurationManager.AppSettings["include_rts"];
-			string excludeReplies = ConfigurationManager.AppSettings["exclude_replies"];
-			int count = Convert.ToInt16(ConfigurationManager.AppSettings["count"]);
-			string timelineFormat = ConfigurationManager.AppSettings["timelineFormat"];			
+            AuthenticateSettings = new AuthenticateSettings
+			{
+			    OAuthConsumerKey = oAuthConsumerKey,
+                OAuthConsumerSecret = oAuthConsumerSecret,
+                OAuthUrl = ConfigurationManager.AppSettings["oAuthUrl"] ?? "https://api.twitter.com/oauth2/token"
+            };
+			
 			TimeLineSettings = new TimeLineSettings
 			{
-				ScreenName = screenname,
-				IncludeRts = includeRts,
-				ExcludeReplies = excludeReplies,
-				Count = count,
-				TimelineFormat = timelineFormat
-			};
-			string searchFormat = ConfigurationManager.AppSettings["searchFormat"];
-			string searchQuery = ConfigurationManager.AppSettings["searchQuery"];
-			SearchSettings = new SearchSettings
+				ScreenName = screenName,
+				IncludeRts = ConfigurationManager.AppSettings["include_rts"] ?? "1",
+				ExcludeReplies = ConfigurationManager.AppSettings["exclude_replies"] ?? "0",
+				Count = Convert.ToInt16(ConfigurationManager.AppSettings["count"] ?? "10"),
+				TimelineFormat = ConfigurationManager.AppSettings["timelineFormat"] ?? "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name={0}&amp;include_rts={1}&amp;exclude_replies={2}&amp;count={3}"
+            };
+
+            SearchSettings = new SearchSettings
 			{
-				SearchFormat = searchFormat,
-				SearchQuery = searchQuery
-			};
+				SearchFormat = ConfigurationManager.AppSettings["searchFormat"] ?? "https://api.twitter.com/1.1/search/tweets.json?q={0}",
+				SearchQuery = ConfigurationManager.AppSettings["searchQuery"]
+            };
 				
 		}
 
-		/// <summary>
-		/// This allows the authentications settings to be passed in
-		/// </summary>
-		/// <param name="authenticateSettings"></param>
-		public OAuthTwitterWrapper(IAuthenticateSettings authenticateSettings)
+        /// <summary>
+        /// The default constructor takes all the settings from the appsettings file
+        /// </summary>
+        public OAuthTwitterWrapper() : this(ConfigurationManager.AppSettings["oAuthConsumerKey"], ConfigurationManager.AppSettings["oAuthConsumerSecret"], ConfigurationManager.AppSettings["screenname"])
+        {
+        }
+
+        /// <summary>
+        /// This allows the authentications settings to be passed in
+        /// </summary>
+        /// <param name="authenticateSettings"></param>
+        public OAuthTwitterWrapper(IAuthenticateSettings authenticateSettings)
 		{
 			AuthenticateSettings = authenticateSettings;
 		}
@@ -75,6 +79,7 @@ namespace OAuthTwitterWrapper
 			TimeLineSettings = timeLineSettings;
 			SearchSettings = searchSettings;
 		}
+
         public Task<string> GetMyTimelineAsync()
         {
             IAuthenticate authenticate = new Authenticate();
