@@ -1,19 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Net;
+﻿using System.Net;
 using System.IO;
-using Newtonsoft.Json;
-using OAuthTwitterWrapper.JsonTypes;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace OAuthTwitterWrapper
 {
-	class Utility
+	internal class Utility
 	{
-		public string RequstJson(string apiUrl, string tokenType, string accessToken)
+        public async Task<string> RequstJsonAsync(string apiUrl, string tokenType, string accessToken)
+        {
+            var apiRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
+            apiRequest.Headers.Add("Authorization", $"{tokenType} {accessToken}");
+            apiRequest.Method = "Get";
+
+            WebResponse responseObject = await Task<WebResponse>.Factory.FromAsync(apiRequest.BeginGetResponse, apiRequest.EndGetResponse, apiRequest);
+            using (var responseStream = responseObject.GetResponseStream())
+            {
+                var sr = new StreamReader(responseStream, Encoding.UTF8);
+                return await sr.ReadToEndAsync();
+            }
+        }
+
+        public string RequstJson(string apiUrl, string tokenType, string accessToken)
 		{
-			var json = string.Empty;			
+			string json;			
 			HttpWebRequest apiRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
 			var timelineHeaderFormat = "{0} {1}";
 			apiRequest.Headers.Add("Authorization",
@@ -24,11 +34,10 @@ namespace OAuthTwitterWrapper
 						
 			using (timeLineResponse)
 			{
-				using (var reader = new StreamReader(timeLineResponse.GetResponseStream()))
+				using (var response = timeLineResponse.GetResponseStream())
 				{
-					json = reader.ReadToEnd();
-					// The below can be used to deserialize into a c# object
-					//var result = JsonConvert.DeserializeObject<List<TimeLine>>(json);
+                    var reader = new StreamReader(response, Encoding.UTF8);
+                    json = reader.ReadToEnd();
 				}
 			}
 			return json;
