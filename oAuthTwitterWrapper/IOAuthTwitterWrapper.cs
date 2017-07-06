@@ -1,8 +1,13 @@
-﻿namespace OAuthTwitterWrapper
+﻿using System.Threading.Tasks;
+
+namespace OAuthTwitterWrapper
 {
 	public interface IOAuthTwitterWrapper
 	{
 		string GetMyTimeline();
-		string GetSearch();
+
+	    Task<string> GetMyTimelineAsync();
+
+        string GetSearch();
 	}
 }
