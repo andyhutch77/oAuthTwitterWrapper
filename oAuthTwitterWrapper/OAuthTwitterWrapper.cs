@@ -37,7 +37,7 @@ namespace OAuthTwitterWrapper
 				SearchFormat = ConfigurationManager.AppSettings["searchFormat"] ?? "https://api.twitter.com/1.1/search/tweets.json?q={0}",
 				SearchQuery = ConfigurationManager.AppSettings["searchQuery"]
             };
-				
+
 		}
 
         /// <summary>
