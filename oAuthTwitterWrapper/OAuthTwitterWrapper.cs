@@ -14,7 +14,7 @@ namespace OAuthTwitterWrapper
         /// <summary>
         /// This constructor takes most of the settings from the appsettings file apart from consumer key and consumer secret. If not filled in, there are defaults.
         /// </summary>
-        public OAuthTwitterWrapper(string oAuthConsumerKey, string oAuthConsumerSecret, string screenName)
+        public OAuthTwitterWrapper(string oAuthConsumerKey, string oAuthConsumerSecret, string screenName = "")
 		{
             AuthenticateSettings = new AuthenticateSettings
 			{
@@ -80,31 +80,52 @@ namespace OAuthTwitterWrapper
 			SearchSettings = searchSettings;
 		}
 
-        public Task<string> GetMyTimelineAsync()
+        public Task<string> GetTimelineAsync()
         {
-            IAuthenticate authenticate = new Authenticate();
-            AuthResponse twitAuthResponse = authenticate.AuthenticateMe(AuthenticateSettings);
+            var twitAuthResponse = AuthenticateResponse();
 
             var utility = new Utility();
             return utility.RequstJsonAsync(TimeLineSettings.TimelineUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
         }
 
+        public Task<string> GetTimelineAsync(string screenName)
+        {
+            TimeLineSettings.ScreenName = screenName;
+            return GetTimelineAsync();
+        }
+
+        [Obsolete("Use GetTimeline instead")]
         public string GetMyTimeline()
         {
-            IAuthenticate authenticate = new Authenticate();
-			AuthResponse twitAuthResponse = authenticate.AuthenticateMe(AuthenticateSettings);
+            return this.GetTimeline();
+        }
+
+        public string GetTimeline()
+        {
+            var twitAuthResponse = AuthenticateResponse();
 
             var utility = new Utility();
             return utility.RequstJson(TimeLineSettings.TimelineUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
         }
 
-		public string GetSearch()
-		{
-			IAuthenticate authenticate = new Authenticate();
-			AuthResponse twitAuthResponse = authenticate.AuthenticateMe(AuthenticateSettings);
+        public string GetTimeline(string screenName)
+        {
+            TimeLineSettings.ScreenName = screenName;
+            return GetTimeline();
+        }
 
-			var utility = new Utility();
+        public string GetSearch()
+        {
+            var twitAuthResponse = AuthenticateResponse();
+
+            var utility = new Utility();
             return utility.RequstJson(SearchSettings.SearchUrl, twitAuthResponse.TokenType, twitAuthResponse.AccessToken);
 		}
+
+        private AuthResponse AuthenticateResponse()
+        {
+            IAuthenticate authenticate = new Authenticate();
+            return authenticate.AuthenticateMe(AuthenticateSettings);
+        }
     }
 }

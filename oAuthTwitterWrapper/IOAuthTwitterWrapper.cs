@@ -1,12 +1,16 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace OAuthTwitterWrapper
 {
 	public interface IOAuthTwitterWrapper
 	{
-		string GetMyTimeline();
+        [Obsolete("Use GetTimeline instead")]
+        string GetMyTimeline();
 
-	    Task<string> GetMyTimelineAsync();
+        string GetTimeline();
+
+	    Task<string> GetTimelineAsync();
 
         string GetSearch();
 	}
