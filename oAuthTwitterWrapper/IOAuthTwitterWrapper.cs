@@ -10,7 +10,11 @@ namespace OAuthTwitterWrapper
 
         string GetTimeline();
 
-	    Task<string> GetTimelineAsync();
+        string GetTimeline(string screenName);
+
+        Task<string> GetTimelineAsync();
+
+        Task<string> GetTimelineAsync(string screenName);
 
         string GetSearch();
 	}
