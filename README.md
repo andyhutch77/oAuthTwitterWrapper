@@ -29,7 +29,7 @@ Screen shot below (please note there is no styling applied you have full control
 
 The idea stems from the following Stackoverflow question:
 
-[http://stackoverflow.com/questions/17067996/authenticate-and-request-a-users-timeline-with-twitter-api-1-1-oauth](http://stackoverflow.com/questions/17067996/authenticate-and-request-a-users-timeline-with-twitter-api-1-1-oauth)
+[http://stackoverflow.com/questions/17067996/authenticate-and-request-a-users-timeline-with-twitter-api-1-1-oauth](https://stackoverflow.com/a/17071447/1833612)
 
 ## Demo projects in GitHub
 
