@@ -6,6 +6,9 @@ using OAuthTwitterWrapper;
 
 namespace ConsoleApplication
 {
+    /// <summary>
+    /// Program
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
