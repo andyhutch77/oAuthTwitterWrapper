@@ -1,7 +1,7 @@
 # oAuthTwitterWrapper
 This provides a really simple solution to authenticating and wrapping twitter's API calls using the 1.1 API and OAuth.
 
-##Quick installation instructions:
+## Quick installation instructions:
 
 Run the following nuget command from your project to install the [package] (http://nuget.org/packages/oAuthTwitterWrapper/):
 
@@ -20,7 +20,7 @@ If you would prefer to use serialiazed C# pocos use the following:
            var json = twit.GetMyTimeline();
            var tweets = JsonConvert.DeserializeObject<List<TimeLine>>(json); // Deserialize with Json.NET
 
-#Notes
+# Notes
 Currently it exposes timeline (twitter feed) and search calls, returned as raw json (which can be serialized into c# pocos, examples in the github project).
 
 Screen shot below (please note there is no styling applied you have full control over how it is rendered in your application).
