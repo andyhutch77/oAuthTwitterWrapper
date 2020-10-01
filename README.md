@@ -1,7 +1,7 @@
 # oAuthTwitterWrapper
 This provides a really simple solution to authenticating and wrapping twitter's API calls using the 1.1 API and OAuth.
 
-##Quick installation instructions:
+## Quick installation instructions:
 
 Run the following nuget command from your project to install the [package] (http://nuget.org/packages/oAuthTwitterWrapper/):
 
