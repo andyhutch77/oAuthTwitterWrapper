@@ -1,5 +1,4 @@
-﻿using System;
-namespace OAuthTwitterWrapper
+﻿namespace OAuthTwitterWrapper
 {
 	public interface IAuthenticateSettings
 	{

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace OAuthTwitterWrapper
+﻿namespace OAuthTwitterWrapper
 {
 	public class TimeLineSettings : ITimeLineSettings
 	{
@@ -12,12 +7,6 @@ namespace OAuthTwitterWrapper
 		public string ExcludeReplies { get; set; }
 		public int Count { get; set; }
 		public string TimelineFormat { get; set; }
-		public string TimelineUrl
-		{
-			get
-			{
-				return string.Format(TimelineFormat, ScreenName, IncludeRts, ExcludeReplies, Count);
-			}
-		}
+		public string TimelineUrl => string.Format(TimelineFormat, ScreenName, IncludeRts, ExcludeReplies, Count);
 	}
 }
