@@ -8,5 +8,6 @@ namespace OAuthTwitterWrapper
 		string ScreenName { get; set; }
 		string TimelineFormat { get; set; }
 		string TimelineUrl { get; }
+        string Since_ID { get; set; }
 	}
 }

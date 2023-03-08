@@ -31,14 +31,16 @@ namespace OAuthTwitterWrapper
 			string include_rts = ConfigurationManager.AppSettings["include_rts"];
 			string exclude_replies = ConfigurationManager.AppSettings["exclude_replies"];
 			int count = Convert.ToInt16(ConfigurationManager.AppSettings["count"]);
-			string timelineFormat = ConfigurationManager.AppSettings["timelineFormat"];			
+			string timelineFormat = ConfigurationManager.AppSettings["timelineFormat"];
+            string since_id = ConfigurationManager.AppSettings["timeline_since_id"];
 			TimeLineSettings = new TimeLineSettings
 			{
 				ScreenName = screenname,
 				IncludeRts = include_rts,
 				ExcludeReplies = exclude_replies,
 				Count = count,
-				TimelineFormat = timelineFormat
+				TimelineFormat = timelineFormat,
+                Since_ID = since_id
 			};
 			string searchFormat = ConfigurationManager.AppSettings["searchFormat"];
 			string searchQuery = ConfigurationManager.AppSettings["searchQuery"];
